@@ -1,0 +1,166 @@
+* {
+    box-sizing: border-box;
+    padding: 0%;
+    margin: 0%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: url('images/background.jpg') no-repeat center center/cover;
+    height: 80vh;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  position: fixed;
+  width: 100%;
+  z-index: 100%;
+  top: 0;
+  left: 0;
+}
+
+.icon a img {
+    height: 25px ;
+    width: 25px;
+}
+
+.navlinks h2 {
+    color: orange;
+    font-weight: bold;
+}
+
+.navicon a img{
+    height: 25px;
+    width: 25px;
+}
+
+.inside {
+    padding: 90px;
+    margin-top: 40px;
+}
+
+.inside h1 {
+    margin-right: 290px;
+    font-size: 90px;
+    font-weight: bolder;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+}
+
+.inside .orange {
+    color: orange;
+}
+
+.inside a {
+    padding: 15px;
+    background-color: white;
+    color: purple;
+    text-decoration: none;
+    border-radius: 15px;
+}
+
+.inside a:hover {
+    background-color: orange;
+    color: white;
+}
+
+/* Keyframes for sliding in */
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+.navbar {
+    animation: slideInFromLeft 1s ease-out; 
+}
+
+.inside h1 {
+    animation: slideInFromRight 1s ease-out; 
+}
+
+.inside a {
+    animation: fadeIn 2s ease-in; 
+}
+
+
+@media (max-width: 780px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        height: 100vh; 
+        background-size: cover;
+    }
+
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 15px;
+    }
+
+    .icon a img,
+    .navicon a img {
+        height: 25px;
+        width: 25px;
+    }
+
+    .navlinks h2 {
+        font-size: 20px; 
+        margin: 0 10px;
+        font-weight: bold;
+    }
+
+    .inside {
+        padding: 40px 20px;
+        margin-top: 60px;
+    }
+
+    .inside h1 {
+        font-size: 70px; 
+        line-height: 1.2; 
+        margin: 0;
+        padding: 0;
+        text-align: left;
+    }
+
+    .inside a {
+        font-size: 20px; 
+        padding: 12px 20px;
+        margin-top: 20px;
+        display: inline-block;
+    }
+}
+
+

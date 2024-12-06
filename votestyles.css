@@ -1,0 +1,148 @@
+*{
+    box-sizing: border-box;
+    padding: 0%;
+    margin: 0%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    align-items: center;
+    padding: 20px;
+    position: fixed;
+     width: 100%;
+     z-index: 100%;
+     top: 0;
+     left: 0;
+}
+
+.icon a img {
+    height: 25px ;
+    width: 25px;
+}
+
+.navlinks h2 {
+    color: orange;
+    font-weight: bold;
+}
+
+.navicon a img{
+    height: 25px;
+    width: 25px;
+}
+
+.peoples {
+    display: flex;
+    flex-direction: column;
+}
+
+.peoples {
+    margin-top: 90px;
+}
+
+.peoples h1 {
+    border-bottom: 3px solid purple;
+    width: 280px;
+    align-self: center;
+    text-align: center;
+}
+
+.june {
+    display: flex;
+    justify-content: space-around;
+}
+
+.selection {
+    padding: 20px;
+    border: 1px solid purple;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.candidate img {
+    height: 200px;
+    width: 200px;
+}
+
+.inside {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.inside h3 {
+    font-size: 15px;
+}
+
+.inside p {
+    color: gray;
+    font-size: 10px;
+}
+
+.button a {
+    background-color: purple;
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    align-self: center;
+    border-radius: 15px;
+}
+
+@media (max-width: 780px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        background-size: cover;
+    }
+
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 15px;
+    }
+
+    .june {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .selection {
+        width: 200px;
+    }
+
+    .selection p {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .inside {
+        justify-content: space-between;
+        text-align: center;
+        align-items: center;
+    }
+
+
+
+    .inside h3 {
+        font-size: 9px;
+    }
+
+    .candidate p {
+        font-size: 12px;
+        margin-right: 5px;
+        margin-left: 5px;
+    }
+
+    .button a {
+        padding: 9px;
+        font-size: 12px;
+    }
+
+}

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>obonguniversity Election/Vote</title>
+    <link rel="stylesheet" href="votestyles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="icon">
+                <a href="index.html"><img src="icons8-home-64.png" alt=""></a>
+            </div>
+            <div class="navlinks">
+                <h2>Election-Obong(2024/2025)</h2>
+            </div>
+            <div class="navicon">
+                <a href="#"><img src="icons8-live-50.png" alt=""></a>
+            </div>
+        </nav>
+    </header>
+    <section class="peoples">
+        <h1>Post of President</h1><br>
+      <div class="june">
+        <div class="selection">
+            <div class="candidate">
+                <img src="icons8-person-94.png" alt="">
+                <div class="inside">
+                    <h3>Emmanuel Michael</h3>
+                    <p>900+ Votes</p>
+                </div>
+                <p>Department of Computer Science</p><br>
+                <div class="button">
+                    <a href="#">Vote Now!</a>
+                </div>
+            </div>
+        </div>
+        <div class="selection">
+            <div class="candidate">
+                <img src="icons8-person-94.png" alt="">
+                <div class="inside">
+                    <h6>Emmanuel Michael</h6>
+                    <p>900+ Votes</p>
+                </div>
+                <p>Department of Computer Science</p><br>
+                <div class="button">
+                    <a href="#">Vote Now!</a>
+                </div>
+            </div>
+        </div>
+      </div><br>
+    </section>
+    <section class="peoples">
+        <h1>Post of Head of Security</h1><br>
+      <div class="june">
+        <div class="selection">
+            <div class="candidate">
+                <img src="icons8-person-94.png" alt="">
+                <div class="inside">
+                    <h3>Emmanuel Michael</h3>
+                    <p>900+ Votes</p>
+                </div>
+                <p>Department of Computer Science</p><br>
+                <div class="button">
+                    <a href="#">Vote Now!</a>
+                </div>
+            </div>
+        </div>
+        <div class="selection">
+            <div class="candidate">
+                <img src="icons8-person-94.png" alt="">
+                <div class="inside">
+                    <h6>Emmanuel Michael</h6>
+                    <p>900+ Votes</p>
+                </div>
+                <p>Department of Computer Science</p><br>
+                <div class="button">
+                    <a href="#">Vote Now!</a>
+                </div>
+            </div>
+        </div>
+      </div><br>
+    </section>
+    <section class="peoples">
+        <h1>Post of Financial Secretary</h1><br>
+      <div class="june">
+        <div class="selection">
+            <div class="candidate">
+                <img src="icons8-person-94.png" alt="">
+                <div class="inside">
+                    <h3>Emmanuel Michael</h3>
+                    <p>900+ Votes</p>
+                </div>
+                <p>Department of Computer Science</p><br>
+                <div class="button">
+                    <a href="#">Vote Now!</a>
+                </div>
+            </div>
+        </div>
+        <div class="selection">
+            <div class="candidate">
+                <img src="icons8-person-94.png" alt="">
+                <div class="inside">
+                    <h6>Emmanuel Michael</h6>
+                    <p>900+ Votes</p>
+                </div>
+                <p>Department of Computer Science</p><br>
+                <div class="button">
+                    <a href="#">Vote Now!</a>
+                </div>
+            </div>
+        </div>
+      </div><br>
+    </section>
+    <script>
+        // Wait for the document to load
+        document.addEventListener("DOMContentLoaded", () => {
+          // Get all sections
+          const sections = document.querySelectorAll(".peoples");
+      
+          // Loop through each section
+          sections.forEach((section) => {
+            // Get all vote buttons within the section
+            const voteButtons = section.querySelectorAll(".button a");
+      
+            // Add click event listeners to each button
+            voteButtons.forEach((button) => {
+              button.addEventListener("click", (event) => {
+                event.preventDefault(); // Prevent default link behavior
+      
+                // Check if this section already has a voted candidate
+                const alreadyVoted = section.querySelector(".button a.voted");
+                if (!alreadyVoted) {
+                  // Mark the clicked button as voted
+                  button.textContent = "Done";
+                  button.classList.add("voted");
+      
+                  // Disable other buttons in the same section
+                  voteButtons.forEach((btn) => {
+                    if (btn !== button) {
+                      btn.textContent = "Disabled";
+                      btn.style.backgroundColor = "gray";
+                      btn.style.pointerEvents = "none"; // Make it non-clickable
+                    }
+                  });
+                } else {
+                  alert("You can only vote for one person in this section!");
+                }
+              });
+            });
+          });
+        });
+      </script>
+      
+</body>
+</html>
